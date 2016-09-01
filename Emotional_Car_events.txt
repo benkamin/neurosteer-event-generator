@@ -1,0 +1,23 @@
+
+The goal was to use the current 8 measures (c1-3, h1-2, e1-3) in order to create events that will be significant and universal.
+
+In order to make the events universal and not individual, we wanted to measure the change in the measures, and not the absolute value. We compared the most recent mesaure to the average of the 10 previous measures as such:
+
+change_measure = (recent_measure - average[previous 10]) / stdev[previous 10]
+
+We created a dynamic real time graph to show the change in the measures, and stated testing on people.
+
+After testing with 4 different people, including myself, it seemed like 1.8 suffice to show a significant change in the measures.
+
+Therefore, I created 4 events:
+
+C1 is +1.8*stdev: Concentrated.
+C1 is -1.8*stdev: Distracted.
+E1 is +1.8*stdev: Excited.
+H1 is +1.8*stdev: Happy.
+
+Decrease in H1-2 and E1-2 didn't seem to mean any significant change in the person emotions.
+
+However, accidentally, I was able to identify another significant event. While some of the participants tested the device, they others seemd to enjoy startling them, which I haven't thought of doing myself. While being startled, I realized there's a very significant change in the measures that repeated every time: C1 and C2 decreased significantly, and E2 and E3 increased significantly. Therefore, I created a fifth event:
+
+C1 and C2 are -2.5*stdev AND E2 and E3 are +2.5*stdev: Startled.
